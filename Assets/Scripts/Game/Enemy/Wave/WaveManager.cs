@@ -38,6 +38,7 @@ public class WaveManager : MonoBehaviour {
     //3
     foreach (EnemyWave enemyWave in enemyWaves)
     {
+      //4
       if (!activatedWaves.Contains(enemyWave) && enemyWave.startSpawnTimeInSeconds <= elapsedTime)
       {
         // Activate next wave
@@ -45,6 +46,7 @@ public class WaveManager : MonoBehaviour {
         activeWave = enemyWave;
         activatedWaves.Add(enemyWave);
         spawnCounter = 0f;
+        GameManager.Instance.waveNumber++;
         //6
         break;
       }
@@ -78,6 +80,7 @@ public class WaveManager : MonoBehaviour {
           //8
           if (activatedWaves.Count == enemyWaves.Count)
           {
+            GameManager.Instance.enemySpawningOver = true;
             // All waves are over
           }
 
