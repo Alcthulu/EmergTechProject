@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 47c3ad99ea01d444e8aa5d974db15571
+timeCreated: 1537430568
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Yikes!
+  fontNames:
+  - Yikes!
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
