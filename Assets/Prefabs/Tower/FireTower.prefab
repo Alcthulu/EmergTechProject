@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000012864226544}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1000010850984746
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013278041828}
   - component: {fileID: 33000012424750476}
@@ -31,9 +31,9 @@ GameObject:
 --- !u!1 &1000012854509350
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4000010863308978}
   - component: {fileID: 198000010864415800}
@@ -48,14 +48,15 @@ GameObject:
 --- !u!1 &1000012864226544
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4000013277781598}
   - component: {fileID: 82000012449769350}
   - component: {fileID: 65000010296972936}
   - component: {fileID: 114000010241208920}
+  - component: {fileID: 114804262812910582}
   m_Layer: 0
   m_Name: FireTower
   m_TagString: Untagged
@@ -66,7 +67,7 @@ GameObject:
 --- !u!4 &4000010863308978
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012854509350}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
@@ -79,7 +80,7 @@ Transform:
 --- !u!4 &4000013277781598
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012864226544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -94,7 +95,7 @@ Transform:
 --- !u!4 &4000013278041828
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010850984746}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
@@ -107,7 +108,7 @@ Transform:
 --- !u!23 &23000013358712068
 MeshRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010850984746}
   m_Enabled: 1
@@ -142,14 +143,14 @@ MeshRenderer:
 --- !u!33 &33000012424750476
 MeshFilter:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010850984746}
   m_Mesh: {fileID: 4300000, guid: 7102817c2d13748eaa1dba656d461c3e, type: 3}
 --- !u!65 &65000010296972936
 BoxCollider:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012864226544}
   m_Material: {fileID: 0}
@@ -161,7 +162,7 @@ BoxCollider:
 --- !u!82 &82000012449769350
 AudioSource:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012864226544}
   m_Enabled: 1
@@ -256,7 +257,7 @@ AudioSource:
 --- !u!114 &114000010241208920
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012864226544}
   m_Enabled: 1
@@ -269,7 +270,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 114804262812910582}
           m_MethodName: ShowTowerInfo
           m_Mode: 1
           m_Arguments:
@@ -283,10 +284,31 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &114804262812910582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012864226544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79b056bf84a04e47b1c4ede589e1546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPower: 12
+  timeBetweenAttacksInSeconds: 3
+  aggroRadius: 8
+  towerLevel: 1
+  type: 1
+  shootSound: {fileID: 0}
+  towerPieceToAim: {fileID: 0}
+  targetEnemy: {fileID: 0}
+  fireParticlesPrefab: {fileID: 1000012884060136, guid: 65f96378677d3402fb14c5021c4db4e2,
+    type: 2}
 --- !u!198 &198000010864415800
 ParticleSystem:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012854509350}
   serializedVersion: 5
@@ -921,6 +943,8 @@ ParticleSystem:
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
+    m_Sprite: {fileID: 0}
+    m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
@@ -4816,9 +4840,9 @@ ParticleSystem:
     vectorLabel1_3: W
 --- !u!199 &199000010985455378
 ParticleSystemRenderer:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012854509350}
   m_Enabled: 1
@@ -4864,6 +4888,7 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 0
+  m_ApplyActiveColorSpace: 0
   m_VertexStreams: 0001030405
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}

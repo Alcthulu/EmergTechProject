@@ -2891,12 +2891,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012468946848, guid: 23756d8718572404c815ca721344b12d,
     type: 2}
   m_PrefabInternal: {fileID: 1417864367}
---- !u!114 &784358304 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114523746323007716, guid: 5a47045c1e027f64cb0bc4809abf9f07,
-    type: 2}
-  m_PrefabInternal: {fileID: 2137088208}
-  m_Script: {fileID: 11500000, guid: 6e1adce25df17e24196cc4bb57ceabc2, type: 3}
 --- !u!4 &800285483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012468946848, guid: 23756d8718572404c815ca721344b12d,
@@ -3390,9 +3384,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stoneTowerPrefab: {fileID: 1000012973691242, guid: 5a47045c1e027f64cb0bc4809abf9f07,
     type: 2}
-  fireTowerPrefab: {fileID: 0}
-  iceTowerPrefab: {fileID: 0}
-  TowerCosts: []
+  fireTowerPrefab: {fileID: 1000012864226544, guid: 8b509d66d3dc3b146a4c70e14bb90bc4,
+    type: 2}
+  iceTowerPrefab: {fileID: 1000012819307948, guid: a13c986921726fb45a55b0ed82c536ac,
+    type: 2}
+  TowerCosts:
+  - TowerType: 0
+    Cost: 100
+  - TowerType: 1
+    Cost: 200
+  - TowerType: 2
+    Cost: 150
 --- !u!1 &1009508817
 GameObject:
   m_ObjectHideFlags: 0
@@ -4279,6 +4281,11 @@ MonoBehaviour:
   txtGold: {fileID: 1360237430}
   txtWave: {fileID: 110665042}
   txtEscapedEnemies: {fileID: 1517282190}
+  enemyHealthBars: {fileID: 426373307}
+  enemyHealthBarPrefab: {fileID: 1000013260251260, guid: 675fe109f23546d40876f30b27e9c8f3,
+    type: 2}
+  centerWindow: {fileID: 303642381}
+  damageCanvas: {fileID: 1384947502}
 --- !u!4 &1307407622
 Transform:
   m_ObjectHideFlags: 0
@@ -5704,7 +5711,7 @@ Transform:
   - {fileID: 800285483}
   - {fileID: 326915705}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1575753892
 GameObject:
@@ -7416,64 +7423,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012468946848, guid: 23756d8718572404c815ca721344b12d,
     type: 2}
   m_PrefabInternal: {fileID: 1678569228}
---- !u!1001 &2137088208
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010963557352, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114523746323007716, guid: 5a47045c1e027f64cb0bc4809abf9f07,
-        type: 2}
-      propertyPath: stonePrefab
-      value: 
-      objectReference: {fileID: 1000012378032816, guid: ea3db759f8d834de0a42a0c7c78b8461,
-        type: 2}
-    - target: {fileID: 114000012129717018, guid: 5a47045c1e027f64cb0bc4809abf9f07,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 784358304}
-    - target: {fileID: 114000012129717018, guid: 5a47045c1e027f64cb0bc4809abf9f07,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowTowerInfo
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!4 &2139554116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012468946848, guid: 23756d8718572404c815ca721344b12d,
