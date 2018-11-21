@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 838495945}
         m_MethodName: RetryLevel
         m_Mode: 1
         m_Arguments:
@@ -2891,6 +2891,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012468946848, guid: 23756d8718572404c815ca721344b12d,
     type: 2}
   m_PrefabInternal: {fileID: 1417864367}
+--- !u!114 &784358304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114523746323007716, guid: 5a47045c1e027f64cb0bc4809abf9f07,
+    type: 2}
+  m_PrefabInternal: {fileID: 2137088208}
+  m_Script: {fileID: 11500000, guid: 6e1adce25df17e24196cc4bb57ceabc2, type: 3}
 --- !u!4 &800285483 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012468946848, guid: 23756d8718572404c815ca721344b12d,
@@ -4266,6 +4272,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addTowerWindow: {fileID: 114993565}
+  towerInfoWindow: {fileID: 2053448799}
+  winGameWindow: {fileID: 1868847988}
+  loseGameWindow: {fileID: 766434015}
+  blackBackground: {fileID: 1853779991}
   txtGold: {fileID: 1360237430}
   txtWave: {fileID: 110665042}
   txtEscapedEnemies: {fileID: 1517282190}
@@ -5422,7 +5432,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 838495945}
         m_MethodName: RetryLevel
         m_Mode: 1
         m_Arguments:
@@ -6839,7 +6849,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 838495945}
         m_MethodName: QuitToTitleScreen
         m_Mode: 1
         m_Arguments:
@@ -7054,7 +7064,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 838495945}
         m_MethodName: QuitToTitleScreen
         m_Mode: 1
         m_Arguments:
@@ -7451,6 +7461,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1000012378032816, guid: ea3db759f8d834de0a42a0c7c78b8461,
         type: 2}
+    - target: {fileID: 114000012129717018, guid: 5a47045c1e027f64cb0bc4809abf9f07,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 784358304}
+    - target: {fileID: 114000012129717018, guid: 5a47045c1e027f64cb0bc4809abf9f07,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowTowerInfo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a47045c1e027f64cb0bc4809abf9f07, type: 2}
   m_IsPrefabAsset: 0
